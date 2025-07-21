@@ -1,5 +1,13 @@
 # MERN Stack Capstone Project
 
+## 📹 Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/Dwl7BNTrsZI/0.jpg)](https://youtu.be/Dwl7BNTrsZI)
+
+Or [click here to watch on YouTube](https://youtu.be/Dwl7BNTrsZI)
+
+---
+
 This is a full-stack MERN (MongoDB, Express.js, React, Node.js) application developed as a capstone project for the PLP MERN Stack Development course.
 
 ## 🚀 Project Overview
@@ -32,6 +40,7 @@ week-8-capstone_-Otigef/
     package.json     # Frontend dependencies
   .gitignore         # Files/folders to ignore in git
   README.md          # Project documentation
+  demo/              # Demo videos and assets
 ```
 
 ## ⚙️ Setup Instructions
