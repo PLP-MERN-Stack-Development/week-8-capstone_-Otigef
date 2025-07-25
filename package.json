@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "start": "node backend/bin/www"
-  },
   "devDependencies": {
     "tailwindcss": "^4.1.11"
   }
