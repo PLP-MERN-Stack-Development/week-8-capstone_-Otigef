@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "build": "echo \"No build step required\""
+    "start": "node server.js"
   },
   "dependencies": {
     "@vitalets/google-translate-api": "^9.2.1",
