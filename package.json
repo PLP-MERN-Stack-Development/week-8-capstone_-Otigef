@@ -1,8 +1,10 @@
 {
   "scripts": {
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "vite": "vite"
   },
   "devDependencies": {
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.6"
   }
 }
