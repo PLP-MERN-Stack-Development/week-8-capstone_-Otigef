@@ -84,7 +84,7 @@ PORT=3000
 ```
 
 ## 🌐 Usage
-- Visit the frontend (default: http://localhost:5173 or http://localhost:5174)
+- Visit the frontend https://www-kenyamsaidizike-com.onrender.com
 - Register a new user
 - Login to access the dashboard
 - Manage documents
