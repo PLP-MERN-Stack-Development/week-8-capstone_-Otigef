@@ -47,7 +47,7 @@ const Login = () => {
             <Globe className="h-6 w-6 text-white" />
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-secondary-900">
-            Sign in to Kenya Civic Hub
+            Sign in to Kenya Msaidizi Hub
           </h2>
           <p className="mt-2 text-sm text-secondary-600">
             Access government services in your preferred language

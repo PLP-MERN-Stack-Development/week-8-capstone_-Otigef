@@ -1,3 +1,5 @@
+# Copyright © 2024 Otigef. All rights reserved.
+
 # MERN Stack Capstone Project
 
 ## 📹 Demo Video

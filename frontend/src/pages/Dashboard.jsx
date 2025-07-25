@@ -76,7 +76,7 @@ const Dashboard = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <PageHeader
-        title="Welcome to Kenya Civic Hub"
+        title="Welcome to Kenya Msaidizi"
         description="Access government services in your preferred language"
       />
 

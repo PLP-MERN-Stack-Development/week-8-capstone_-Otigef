@@ -47,7 +47,7 @@ const Navbar = () => {
                 <Globe className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-primary-600">
-                Kenya Civic Hub
+                Kenya Msaidizi
               </span>
             </Link>
           </div>
