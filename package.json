@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "your-framework-build-command"
+    "build": "cd frontend && npm run build"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.11"
