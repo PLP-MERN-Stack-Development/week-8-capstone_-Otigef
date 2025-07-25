@@ -2,6 +2,9 @@
   "name": "backend",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "@vitalets/google-translate-api": "^9.2.1",
     "axios": "^1.10.0",
