@@ -1,4 +1,5 @@
 // server.js for starting the Express app
+require('dotenv').config();
 const app = require('./app');
 const http = require('http');
 
