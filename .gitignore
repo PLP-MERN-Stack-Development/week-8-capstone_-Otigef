@@ -23,7 +23,6 @@ yarn-error.log*
 
 # Build output
 dist/
-build/
 frontend/dist/
 backend/dist/
 
