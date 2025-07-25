@@ -1,0 +1,5 @@
+[33m0d291da[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix: added react-router-dom
+[33mc7d6ac5[m Merge remote changes and update backend configuration
+[33m24d0fde[m Improve mongoose.connect() with recommended connection options
+[33m716b69b[m Update README.md
+[33m07c393e[m Fix: install react-router-dom in frontend for Vite build
