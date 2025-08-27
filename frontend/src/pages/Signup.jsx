@@ -15,7 +15,7 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   
-  const { signup } = useAuth();
+  const { register } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -48,7 +48,7 @@ const Signup = () => {
     setLoading(true);
     setError('');
 
-    const result = await signup(formData.name, formData.email, formData.password);
+    const result = await register({ name: formData.name, email: formData.email, password: formData.password });
     
     if (result.success) {
       navigate('/dashboard');

@@ -1,104 +1,233 @@
-# Copyright © 2024 Otigef. All rights reserved.
+# Kenya Civic Hub - MERN Stack Application
 
-# MERN Stack Capstone Project
+A comprehensive civic engagement platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and Tailwind CSS.
 
-## 📹 Demo Video
+## 🚀 Features
 
-[![Watch the demo](https://img.youtube.com/vi/Dwl7BNTrsZI/0.jpg)](https://youtu.be/Dwl7BNTrsZI)
+- **User Authentication**: Secure JWT-based authentication system
+- **Modern UI**: Beautiful, responsive design with Tailwind CSS
+- **Real-time Updates**: Live data updates and notifications
+- **Document Management**: Upload, manage, and share documents
+- **Multi-language Support**: Built-in internationalization
+- **Responsive Design**: Works perfectly on all devices
 
-Or [click here to watch on YouTube](https://youtu.be/Dwl7BNTrsZI)
+## 🛠️ Tech Stack
 
----
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB** - Database
+- **Mongoose** - ODM for MongoDB
+- **JWT** - Authentication
+- **bcryptjs** - Password hashing
+- **express-validator** - Input validation
 
-This is a full-stack MERN (MongoDB, Express.js, React, Node.js) application developed as a capstone project for the PLP MERN Stack Development course.
+### Frontend
+- **React 18** - UI library
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **React Router** - Navigation
+- **Axios** - HTTP client
+- **React Hot Toast** - Notifications
+- **Lucide React** - Icons
 
-## 🚀 Project Overview
-This project demonstrates a complete MERN stack application with user authentication, protected routes, and document management. It is designed to showcase skills in backend and frontend development, API integration, and secure user management.
-
-## ✨ Features
-- User registration and login (JWT authentication)
-- Secure password hashing
-- Protected dashboard and routes
-- Document CRUD (Create, Read, Update, Delete)
-- Responsive React frontend
-- MongoDB Atlas or local MongoDB support
-
-## 🗂️ Folder Structure
-```
-week-8-capstone_-Otigef/
-  backend/           # Express.js + MongoDB API
-    models/          # Mongoose models (User, Document)
-    routes/          # Express routes (auth, documents, users)
-    middleware/      # Custom middleware (auth)
-    public/          # Static files
-    app.js           # Main Express app
-    config.env       # Backend environment variables
-  frontend/          # React app
-    src/             # React source code
-      components/    # Reusable components
-      pages/         # App pages (Login, Signup, Dashboard, etc.)
-      context/       # React context (Auth)
-    index.html       # Main HTML file
-    package.json     # Frontend dependencies
-  .gitignore         # Files/folders to ignore in git
-  README.md          # Project documentation
-  demo/              # Demo videos and assets
-```
-
-## ⚙️ Setup Instructions
+## 📦 Installation
 
 ### Prerequisites
-- Node.js (v18 or higher)
+- Node.js (v16 or higher)
+- MongoDB (local or Atlas)
 - npm or yarn
-- MongoDB Atlas account (or local MongoDB)
-- Git
 
-### 1. Clone the repository
-```sh
-git clone https://github.com/PLP-MERN-Stack-Development/week-8-capstone_-Otigef.git
-cd week-8-capstone_-Otigef
+### Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd kenya-civic-hub
+   ```
+
+2. **Install all dependencies**
+   ```bash
+   npm run install-all
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   # Backend
+   cp backend/config/env.example backend/.env
+   
+   # Edit the .env file with your configuration
+   # MONGO_URI=your-mongodb-connection-string
+   # JWT_SECRET=your-secret-key
+   ```
+
+4. **Start the development servers**
+   ```bash
+   # Start both frontend and backend
+   npm run dev
+   
+   # Or start them separately
+   npm run server  # Backend only
+   npm run client  # Frontend only
+   ```
+
+5. **Open your browser**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:5000
+
+## 📁 Project Structure
+
+```
+kenya-civic-hub/
+├── backend/
+│   ├── config/
+│   │   ├── db.js
+│   │   └── env.example
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Document.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── users.js
+│   │   └── documents.js
+│   ├── server.js
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── tailwind.config.js
+└── package.json
 ```
 
-### 2. Backend Setup
-```sh
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file in the `backend` directory:
+
+```env
+NODE_ENV=development
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/kenya-civic-hub
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+FRONTEND_URL=http://localhost:3000
+```
+
+### MongoDB Setup
+
+1. **Local MongoDB**
+   ```bash
+   # Install MongoDB locally
+   # Start MongoDB service
+   mongod
+   ```
+
+2. **MongoDB Atlas**
+   - Create a free account at [MongoDB Atlas](https://www.mongodb.com/atlas)
+   - Create a new cluster
+   - Get your connection string
+   - Update your `.env` file
+
+## 🚀 Deployment
+
+### Backend Deployment (Heroku)
+
+1. **Create Heroku app**
+   ```bash
+   heroku create your-app-name
+   ```
+
+2. **Add environment variables**
+   ```bash
+   heroku config:set NODE_ENV=production
+   heroku config:set MONGO_URI=your-mongodb-atlas-uri
+   heroku config:set JWT_SECRET=your-secret-key
+   ```
+
+3. **Deploy**
+   ```bash
+   git push heroku main
+   ```
+
+### Frontend Deployment (Vercel)
+
+1. **Connect to Vercel**
+   ```bash
+   npm install -g vercel
+   vercel
+   ```
+
+2. **Set environment variables in Vercel dashboard**
+   - `VITE_API_URL` - Your backend URL
+
+## 📝 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register user
+- `POST /api/auth/login` - Login user
+- `POST /api/auth/logout` - Logout user
+- `GET /api/auth/me` - Get current user
+
+### Users
+- `GET /api/users/profile` - Get user profile
+- `PUT /api/users/profile` - Update profile
+- `PUT /api/users/password` - Change password
+
+### Documents
+- `GET /api/documents` - Get all documents
+- `POST /api/documents` - Create document
+- `GET /api/documents/:id` - Get document by ID
+- `PUT /api/documents/:id` - Update document
+- `DELETE /api/documents/:id` - Delete document
+
+## 🧪 Testing
+
+```bash
+# Backend tests
 cd backend
-npm install
-# Copy and edit config.env with your MongoDB URI and JWT secret
-cp config.env.example config.env
-npm start
-```
+npm test
 
-### 3. Frontend Setup
-```sh
-cd ../frontend
-npm install
-npm run dev
+# Frontend tests
+cd frontend
+npm test
 ```
-
-### 4. Environment Variables
-Create a `backend/config.env` file with:
-```
-MONGO_URI=your-mongodb-uri
-JWT_SECRET=your-jwt-secret
-PORT=3000
-```
-
-## 🌐 Usage
-- Visit the frontend https://www-kenyamsaidizike-com.onrender.com
-- Register a new user
-- Login to access the dashboard
-- Manage documents
 
 ## 🤝 Contributing
+
 1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## 📄 License
-This project is for educational purposes as part of the PLP MERN Stack Development course.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [Issues](https://github.com/your-repo/issues) page
+2. Create a new issue with detailed information
+3. Contact the development team
+
+## 🙏 Acknowledgments
+
+- [React](https://reactjs.org/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
 
 ---
 
-**Happy coding!** 
+**Made with ❤️ by the Kenya Civic Hub Team** 

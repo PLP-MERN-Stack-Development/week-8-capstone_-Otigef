@@ -1,20 +1,32 @@
 {
+  "name": "kenya-civic-hub",
+  "version": "1.0.0",
+  "description": "Kenya Civic Hub - A MERN Stack Application",
+  "main": "index.js",
   "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-client": "cd frontend && npm install",
+    "install-server": "cd backend && npm install",
+    "install-all": "npm install && npm run install-server && npm run install-client",
     "build": "cd frontend && npm run build",
-    "vite": "vite"
+    "build-client": "cd frontend && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build-client"
   },
+  "keywords": [
+    "mern",
+    "react",
+    "node",
+    "express",
+    "mongodb",
+    "tailwindcss"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
-    "@vitejs/plugin-react": "^4.7.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11",
-    "vite": "^7.0.6"
-  },
-  "dependencies": {
-    "lucide-react": "^0.525.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.1"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
   }
 }

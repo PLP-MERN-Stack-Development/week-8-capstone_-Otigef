@@ -28,7 +28,7 @@ const Login = () => {
     setLoading(true);
     setError('');
 
-    const result = await login(formData.email, formData.password);
+    const result = await login({ email: formData.email, password: formData.password });
     
     if (result.success) {
       navigate('/dashboard');
@@ -47,7 +47,7 @@ const Login = () => {
             <Globe className="h-6 w-6 text-white" />
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-secondary-900">
-            Sign in to Kenya Msaidizi Hub
+            Sign in to Kenya Civic Hub
           </h2>
           <p className="mt-2 text-sm text-secondary-600">
             Access government services in your preferred language
